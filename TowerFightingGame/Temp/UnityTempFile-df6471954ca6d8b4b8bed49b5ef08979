@@ -17,7 +17,6 @@
 -define:UNITY_5_5_4
 -define:UNITY_5_5
 -define:UNITY_5
--define:UNITY_ANALYTICS
 -define:ENABLE_AUDIO
 -define:ENABLE_CACHING
 -define:ENABLE_CLOTH
@@ -78,8 +77,12 @@
 -define:UNITY_EDITOR_WIN
 -define:UNITY_TEAM_LICENSE
 -define:ENABLE_VSTU
-Assets/GUI.cs
-Assets/Player.cs
+Assets/Scripts/Attack1.cs
+Assets/Scripts/Attack2.cs
+Assets/Scripts/FighterScript.cs
+Assets/Scripts/FighterScript2.cs
+Assets/Scripts/GUI.cs
+Assets/Scripts/Player.cs
 -r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Runtime.Serialization.dll"
 -r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Xml.Linq.dll"
 -r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\UnityScript.dll"
