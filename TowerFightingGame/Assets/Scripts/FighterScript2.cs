@@ -6,7 +6,7 @@ public class FighterScript2 : MonoBehaviour
 {
     Rigidbody2D rb;
     float vertical;
-
+    public float health;
     bool jmpKey;
     float jmpForce;
     float jmpDuration;
@@ -17,7 +17,7 @@ public class FighterScript2 : MonoBehaviour
     void Start()
     {
 
-
+        health = 1;
         rb = GetComponent<Rigidbody2D>();
 
     }
@@ -53,6 +53,10 @@ public class FighterScript2 : MonoBehaviour
         if (col.collider.tag == "Floor")
         {
             onFloor = true;
+        }
+        if (col.collider.tag == "P1Attack")
+        {
+            health -= .2f;
         }
     }
 }

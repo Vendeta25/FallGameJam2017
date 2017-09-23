@@ -5,7 +5,7 @@ using UnityEngine;
 public class FighterScript : MonoBehaviour {
     Rigidbody2D rb;
     float vertical;
-
+    public float health;
     bool jmpKey;
     float jmpForce;
     float jmpDuration;
@@ -15,7 +15,7 @@ public class FighterScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-
+        health = 1;
         rb = GetComponent<Rigidbody2D>();
        
     }
@@ -54,6 +54,10 @@ public class FighterScript : MonoBehaviour {
         if(col.collider.tag == "Floor")
         {
             onFloor = true;
+        }
+        if(col.collider.tag == "P2Attack")
+        {
+            health -= .2f;
         }
     }
 }
