@@ -22,9 +22,12 @@ public class FighterScript : MonoBehaviour {
 
     void FixedUpdate()
     {
+        if (Input.GetKeyDown("r"))
+        {
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+        }
 
-        
-        if (Input.GetButtonDown("Jump") && onFloor )
+        if (Input.GetKeyDown("w") && onFloor )
         {
             jmpDuration = 0;
             jmpForce = 0;
