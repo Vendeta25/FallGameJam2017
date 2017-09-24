@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GUI : MonoBehaviour {
 
@@ -15,11 +16,14 @@ public class GUI : MonoBehaviour {
     public float time;
     public Text timer;
     public Text shout;
-    
+    public GameObject button;
+
     
 
 	// Use this for initialization
 	void Start () {
+        button = GameObject.Find("Button");
+        button.SetActive(false);
         p1 = GameObject.Find("Player1");
         p1Script = p1.GetComponent<FighterScript>();
         p2 = GameObject.Find("Player2");
@@ -98,6 +102,12 @@ public class GUI : MonoBehaviour {
             }
             
         }
+        else if (!game)
+        {
+            //SceneManager.LoadScene("menu");
+            button.SetActive(true);
+        }
+        
         
 	}
 
@@ -109,5 +119,10 @@ public class GUI : MonoBehaviour {
         //Debug.Log("waited");
         
         
+    }
+
+    public void toMenu()
+    {
+        SceneManager.LoadScene("menu");
     }
 }
